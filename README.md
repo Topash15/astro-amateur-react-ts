@@ -1,1 +1,0 @@
-# astro-amateur-react-ts

@@ -1,0 +1,16 @@
+header {
+  height: 2rem;
+  box-shadow: 0 0 white;
+  display: flex;
+  align-items: center;
+}
+header .title {
+  margin-right: auto;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav li{
+    padding: .5rem 1rem;
+}
