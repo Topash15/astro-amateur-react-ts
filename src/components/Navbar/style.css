@@ -7,6 +7,11 @@ header {
 header .title {
   margin-right: auto;
 }
+header .title a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
 nav ul {
   display: flex;
   list-style: none;

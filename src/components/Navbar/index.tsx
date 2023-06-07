@@ -3,7 +3,7 @@ import './style.css'
 function Navbar(){
     return(
         <header className="header">
-            <h1 className='title'>Astro Amateur</h1>
+            <h1 className='title'><a href="/">Astro Amateur</a></h1>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>

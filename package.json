@@ -1,5 +1,6 @@
 {
   "name": "astro-amateur-react-ts",
+  "homepage": "https://astroamateur.space/photos",
   "private": true,
   "version": "0.0.0",
   "type": "module",

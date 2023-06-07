@@ -28,7 +28,7 @@ function Images() {
             <a className="photo" key={photo.id} href={photo.hdSource} target="_blank">
               <img
                 key={photo.id}
-                src={photo.thumbnail}
+                src={photo.source}
                 alt={photo.title}
                 loading="lazy"
               />
