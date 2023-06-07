@@ -1,0 +1,42 @@
+
+.photos-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.photo{
+    display: flex;
+    position: relative;
+    width: 400px;
+    aspect-ratio: 1;
+    overflow:hidden;
+}
+.photo>img{
+    object-fit: cover;
+    object-position: right;
+    max-width: 100%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height:0;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(0, 0, 0, 0);
+    background: rgba(255, 255, 255, 0);
+    transition: all .5s ease;
+}
+.photo:hover .info{
+    display:flex;
+    z-index: 1;
+    color:#fff;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+}
