@@ -14,8 +14,9 @@
 }
 .photo>img{
     object-fit: cover;
-    object-position: right;
+    object-position: center;
     max-width: 100%;
+    transition: all .5s ease;    
 }
 .info{
     display: flex;
@@ -32,11 +33,14 @@
     background: rgba(255, 255, 255, 0);
     transition: all .5s ease;
 }
+.photo:hover>img{opacity:0.5}
 .photo:hover .info{
+    box-sizing: border-box;
     display:flex;
     z-index: 1;
-    color:#fff;
+    color:#000;
     height: 100%;
     width: 100%;
-    background: rgba(255, 255, 255, 0.3);
+    padding: 3rem;
+    background: rgba(255, 255, 255, .5);
 }
