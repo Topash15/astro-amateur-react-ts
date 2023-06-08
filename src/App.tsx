@@ -15,8 +15,8 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <Navbar />
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/" element={<Photos />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/photos" element={<Photos />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>

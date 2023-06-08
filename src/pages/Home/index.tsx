@@ -7,7 +7,7 @@ function Home(){
                 <h2>Astro Amateur</h2>
                 <p>I photograph rockets and space.
                 </p>
-                <a href="/photos">Check them out.</a>
+                <a href="/#/photos">Check them out.</a>
             </div>
         </>
     )
