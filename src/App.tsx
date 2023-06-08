@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Navbar from "./components/Navbar";
 import "./App.css";
+import PhotoDetails from "./pages/PhotoDetails";
 
 function App() {
   const queryClient = new QueryClient();
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/photos" element={<Photos />} />
+          <Route path="/photos/:id" element={<PhotoDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>

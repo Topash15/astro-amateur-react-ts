@@ -1,7 +1,7 @@
 function Blog(){
     return(
         <>
-        <h1>Blog</h1>
+        <h2>Blog</h2>
         <p>Coming soon...</p>
         </>
     )

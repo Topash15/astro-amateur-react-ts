@@ -3,6 +3,7 @@ header {
   box-shadow: 0 0 white;
   display: flex;
   align-items: center;
+  padding: .25rem;
 }
 header .title {
   margin-right: auto;

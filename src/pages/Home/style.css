@@ -5,9 +5,15 @@
     align-items: center;
     height: 50vw;
 }
+@media (max-width:650px){
+    .home-container{
+        margin-top:5rem;
+    }
+}
 .home-container h2{
     font-size: 5rem;
     margin-block: 0;
+    text-align: center;
 }
 .home-container p{
     font-size: 1.2rem;
