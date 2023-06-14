@@ -3,10 +3,14 @@
     max-width: 1200px;
     width: 100%;
     padding: 1rem;
+    margin-inline: auto;
 }
 
 .photo-container{
     width:100%;
+}
+.photo-container a{
+    display: grid;
 }
 .photo-container img {
     width: 100%;
@@ -20,12 +24,16 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 2rem;
 }
 @media (max-width: 650px){
     .info-container{
         flex-direction: column;
         gap: 1rem;
     }
+}
+.info-container h2{
+    font-size: 1.5rem;
 }
 table.meta-table {
     border: 1px solid white;

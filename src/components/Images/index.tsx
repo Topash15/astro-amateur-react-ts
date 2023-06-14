@@ -1,9 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import { useQuery } from "react-query";
 import Photo from "../../types/Photo";
+import { getPlaceholder, blurryStyle } from "../../utils/blurredImagesHandler";
 import "./style.css";
+import '../../utils/blurredImagesStyle.css';
 
 function Images() {
+
+  // blurry loading image handler
+  const [isLoaded, setIsLoaded] = useState(false);
+  const handleImageLoad = ():void => {
+    setIsLoaded(true);
+  }
+
   const fetchAllPhotos = async () => {
     return await (
       await fetch(
@@ -30,12 +39,15 @@ function Images() {
                 key={photo.id}
                 href={`/#/photos/${photo.id}`}
               >
+                <div className={`blurred-img ${isLoaded ? 'loaded' : ''}`} style={blurryStyle(photo.thumbnail, 'thumbnail')}>
                 <img
                   key={photo.id}
                   src={photo.thumbnail}
                   alt={photo.title}
                   loading="lazy"
+                  onLoad={handleImageLoad}
                 />
+                </div>
                 <div className="info">
                   <h3>{photo.title}</h3>
                   <p>{photo.description}</p>

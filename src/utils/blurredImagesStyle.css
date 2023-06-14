@@ -1,0 +1,45 @@
+.blurred-img {
+  filter: blur(10px);
+}
+.blurred-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: pulse 2.5s infinite;
+  background-color: white;
+}
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.blurred-img.loaded::before {
+  animation: none;
+  content: none;
+}
+.blurred-img.loaded {
+  filter: none;
+  background: none;
+}
+.blurred-img img {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+  transition: all 0.5s ease;
+}
+.blurred-img.loaded img {
+  opacity: 1;
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+  transition: all 0.5s ease;
+}

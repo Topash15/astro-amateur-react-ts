@@ -17,6 +17,12 @@ body {
 
 :is(h1, h2, h3, h4, h5, h5) {
   font-size: 1rem;
+  margin-top: 1em;
+}
+
+p{
+  margin-top: 1em;
+  max-width: 64ch;
 }
 
 a {
