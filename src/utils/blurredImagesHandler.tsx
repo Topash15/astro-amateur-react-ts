@@ -1,5 +1,5 @@
 /**source can be thumbnail, hd, or sd */
-export const getPlaceholder = (fileName:any, source: string):string => {
+export const getPlaceholder = (fileName:string, source: string):string => {
     let fileSource: RegExp;
     switch(source){
         case 'thumbnail':
@@ -14,7 +14,7 @@ export const getPlaceholder = (fileName:any, source: string):string => {
     }
     return fileName.replace(fileSource, 'placeholder/').replace(/\.[^/.]+$/ , '-small.jpg');
   }
-export const blurryStyle = (fileName: any, source: string) => (
+export const blurryStyle = (fileName: string, source: string) => (
     {
     background: `url(${getPlaceholder(fileName, source)})`,
     backgroundRepeat: `no-repeat`,
