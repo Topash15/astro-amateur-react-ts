@@ -4,6 +4,8 @@ header {
   display: flex;
   align-items: center;
   padding: .25rem;
+  position: relative;
+  z-index: 10;
 }
 header .title {
   margin-right: auto;
@@ -19,4 +21,50 @@ nav ul {
 }
 nav li{
     padding: .5rem 1rem;
+}
+nav ul.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+  right: 0;
+  background: var(--background);
+  padding: .1rem;
+  gap: 1rem;
+  transition: transform 1s ease;
+}
+nav ul.nav-mobile li {
+  border-bottom: 2px solid #c1c1c163;
+  min-width: 20%;
+  text-align: center;
+}
+nav ul.nav-mobile.open{
+  display: flex;
+  transform: translateY(100%);
+  padding-top: 1rem;
+}
+nav button{
+  width: 40px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  position: relative;
+  /* top: 40px; */
+  background: #000;
+  border: 1px solid var(--secondary);
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+nav button:hover,
+nav button:focus {
+  filter: invert(1);
+}
+nav button span{
+  width: 25px;
+  height: 2px;
+  background: var(--secondary);
 }

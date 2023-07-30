@@ -1,17 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import Photo from "../../types/Photo";
 import { getPlaceholder, blurryStyle } from "../../utils/blurredImagesHandler";
 import "./style.css";
-import '../../utils/blurredImagesStyle.css';
+import "../../utils/blurredImagesStyle.css";
+import Loading from '../Loading';
 
 function Images() {
-
   // blurry loading image handler
   const [isLoaded, setIsLoaded] = useState(false);
-  const handleImageLoad = ():void => {
+  const handleImageLoad = (): void => {
     setIsLoaded(true);
-  }
+  };
 
   const fetchAllPhotos = async () => {
     return await (
@@ -27,11 +27,12 @@ function Images() {
     "photos",
     fetchAllPhotos
   );
+  const testing:string = 'loading'
   return (
     <>
       <div className="photos-container">
         {status === "error" && <div>{error!.message}</div>}
-        {status === "loading" && <div>Loading...</div>}
+        {status === "loading" && <Loading/>}
         {status === "success"
           ? data.results.map((photo: any) => (
               <a
@@ -39,14 +40,17 @@ function Images() {
                 key={photo.id}
                 href={`/#/photos/${photo.id}`}
               >
-                <div className={`blurred-img ${isLoaded ? 'loaded' : ''}`} style={blurryStyle(photo.thumbnail, 'thumbnail')}>
-                <img
-                  key={photo.id}
-                  src={photo.thumbnail}
-                  alt={photo.title}
-                  loading="lazy"
-                  onLoad={handleImageLoad}
-                />
+                <div
+                  className={`blurred-img ${isLoaded ? "loaded" : ""}`}
+                  style={blurryStyle(photo.thumbnail, "thumbnail")}
+                >
+                  <img
+                    key={photo.id}
+                    src={photo.thumbnail}
+                    alt={photo.title}
+                    loading="lazy"
+                    onLoad={handleImageLoad}
+                  />
                 </div>
                 <div className="info">
                   <h3>{photo.title}</h3>
