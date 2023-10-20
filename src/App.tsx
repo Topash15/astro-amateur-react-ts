@@ -5,6 +5,7 @@ import Photos from "./pages/Photos";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Admin from "./pages/Admin";
+import Debug from "./pages/Debug";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import PhotoDetails from "./pages/PhotoDetails";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/debug" element={<Debug />} />
         </Routes>
       </QueryClientProvider>
     </>
