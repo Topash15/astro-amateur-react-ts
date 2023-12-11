@@ -22,6 +22,18 @@ nav ul {
 nav li{
     padding: .5rem 1rem;
 }
+ul.socials{
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+.socials li{
+  width: 25px;
+  transition: all 0.25s ease-in-out;
+}
+.socials li:hover{
+  transform: scale(1.2);
+}
 nav ul.nav-mobile {
   display: flex;
   flex-direction: column;

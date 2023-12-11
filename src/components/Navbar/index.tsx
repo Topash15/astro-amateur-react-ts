@@ -34,12 +34,16 @@ function Navbar(){
     return(
         <header className="header">
             <h1 className='title'><a href="/">Astro Amateur</a></h1>
+            <ul className='socials'>
+                    <li><a href="https://www.instagram.com/TheAstroAmateur" target="_blank"><img src="src/assets/Instagram_Glyph_White256.png" alt="Instagram" width="100%" /></a></li>
+                    <li><a href="https://www.threads.net/TheAstroAmateur" target="_blank"><img src="src/assets/threads-logo-white-01.png" alt="Threads" width="100%" /></a></li>
+                </ul>
             <nav>
                 <ul className = {classnames(isMobile() ? 'nav-mobile' : '', isOpen ? 'open' : 'closed')}>
                     <li><a onClick={()=>{toggleMenu()}} href="/">Home</a></li>
                     <li><a onClick={()=>{toggleMenu()}} href="/#/photos">Photos</a></li>
-                    <li><a onClick={()=>{toggleMenu()}} href="/#/about" >About</a></li>
-                    <li><a onClick={()=>{toggleMenu()}} href="/#/blog" >Blog</a></li>
+                    {/* <li><a onClick={()=>{toggleMenu()}} href="/#/about" >About</a></li>
+                    <li><a onClick={()=>{toggleMenu()}} href="/#/blog" >Blog</a></li> */}
                 </ul>
                 {isMobile() ?
                 <button onClick={()=>{toggleMenu()}}>
