@@ -3,7 +3,7 @@ import Loading from "../../components/Loading";
 function Debug(){
     return(
         <>
-            <Loading />
+            <Loading status='loading' />
         </>
     )
 }
