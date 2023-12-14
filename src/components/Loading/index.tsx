@@ -1,28 +1,39 @@
 import "./style.css";
 import { useState } from "react";
 
-async function Loading() {
+function Loading(props: { status: string; }) {
   const [go, setGo] = useState(-1);
-  const [active, setActive] = useState(-1);
+  const [active, setActive] = useState(0);
+
+  let status: string = props.status || 'loading';
 
   const polls: string[] = [
     'PDL', 'MILA', 'Dryden', 'Wallops', 'Marshall', 'Goddard Ops'
   ];
 
-  const goNogo = ():any=>{
-    if(go !== active){
-      setGo(active);
+  const goNogo = (): void => {
+    console.log('goNogo', { 'go': go, 'active': active })
+    if (go === polls.length - 1 && active >= polls.length -1) {
+      // console.log(status);
+      if (status === 'loading') {
+        setActive(-1);
+        return;
+      }
     }
-    if(go !== polls.length -1) {
-      setActive(active + 1);
-    }
+    setTimeout(() => {
+      if (go !== active) {
+        setGo(active);
+        // console.log({ 'go': go })
+      }
+      setTimeout(() => {
+        if(active < polls.length){
+          setActive(active + 1);
+        }
+        // console.log({ 'active': active })
+      }, 500)
+    }, 1500)
   }
 
-  const timeout = async (delay: number) => {
-      return new Promise( res => setTimeout(res, delay) );
-  }
-  await timeout(5000);
-  
   goNogo();
 
   return (
@@ -35,10 +46,10 @@ async function Loading() {
       </div> */}
       <div id="loading-chart">
         {polls.map((poll, index) => (
-          <>
-            <div className={active === index ? `active` : ``} key={index}>{poll}</div>
-            <div className={go >= index ? `go` : ``}>Go</div>
-          </>
+          <div className="row" key={poll}>
+            <div className={active === index ? `active` : ``}>{poll}</div>
+            <div className={`${index} ${go >= index ? `go` : ``} `}>Go</div>
+          </div>
         ))}
       </div>
     </div>

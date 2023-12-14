@@ -32,7 +32,7 @@ function Images() {
     <>
       <div className="photos-container">
         {status === "error" && <div>{error!.message}</div>}
-        {status === "loading" && <Loading/>}
+        {status === "loading" && <Loading status={status}/>}
         {status === "success"
           ? data.results.map((photo: any) => (
               <a
