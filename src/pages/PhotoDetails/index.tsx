@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useQuery } from "react-query";
 import { Params, useParams } from "react-router-dom";
 import Photo from "../../types/Photo";
+import Loading from "../../components/Loading";
 import { blurryStyle, getPlaceholder } from "../../utils/blurredImagesHandler";
 
 function PhotoDetails() {
@@ -36,7 +37,7 @@ function PhotoDetails() {
     <>
       <div className="details-container">
         {status === "error" && <div>{error!.message}</div>}
-        {status === "loading" && <div>Loading...</div>}
+        {status === "loading" && <Loading status={'loading'}></Loading>}
         {status === "success" ? (
           <>
             <div className="photo-container">
