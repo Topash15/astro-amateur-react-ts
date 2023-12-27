@@ -7,6 +7,7 @@ import Blog from "./pages/Blog";
 import Admin from "./pages/Admin";
 import Debug from "./pages/Debug";
 import Navbar from "./components/Navbar";
+import Timer from './pages/Timer';
 import "./App.css";
 import PhotoDetails from "./pages/PhotoDetails";
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/debug" element={<Debug />} />
+          <Route path="/timer" element={<Timer />} />
         </Routes>
       </QueryClientProvider>
     </>
