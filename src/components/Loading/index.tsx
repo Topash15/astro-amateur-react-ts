@@ -12,7 +12,7 @@ function Loading(props: { status: string; }) {
   ];
 
   const goNogo = (): void => {
-    console.log('goNogo', { 'go': go, 'active': active })
+    // console.log('goNogo', { 'go': go, 'active': active })
     if (go === polls.length - 1 && active >= polls.length -1) {
       // console.log(status);
       if (status === 'loading') {
@@ -39,7 +39,8 @@ function Loading(props: { status: string; }) {
   return (
     <div className="loading">
       <p>
-        Our servers will shut down automatically if they are inactive for too long. It may take a couple minutes to start back up. Standby for liftoff.
+        {/* Our servers will shut down automatically if they are inactive for too long. It may take a couple minutes to start back up.  */}
+        Standby for liftoff.
       </p>
       {/* <div id="loading-bar-container">
         <span id="loading-bar"></span>

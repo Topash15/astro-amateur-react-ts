@@ -6,6 +6,7 @@ import { Params, useParams } from "react-router-dom";
 import Photo from "../../types/Photo";
 import Loading from "../../components/Loading";
 import { blurryStyle, getPlaceholder } from "../../utils/blurredImagesHandler";
+import { SERVER } from '../../environment'
 
 function PhotoDetails() {
   const { id } = useParams();
@@ -19,7 +20,7 @@ function PhotoDetails() {
   const getPhotoById = async () => {
     return await (
       await fetch(
-        `https://astro-amateur-server.onrender.com/api/portfolio/get/photo/${id}`
+        `${SERVER}/api/portfolio/get/photo/${id}`
       )
     ).json();
   };

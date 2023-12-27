@@ -5,6 +5,7 @@ import { getPlaceholder, blurryStyle } from "../../utils/blurredImagesHandler";
 import "./style.css";
 import "../../utils/blurredImagesStyle.css";
 import Loading from '../Loading';
+import {SERVER} from '../../environment'
 
 function Images() {
   // blurry loading image handler
@@ -16,7 +17,7 @@ function Images() {
   const fetchAllPhotos = async () => {
     return await (
       await fetch(
-        "https://astro-amateur-server.onrender.com/api/portfolio/get/photos"
+        `${SERVER}/api/portfolio/get/photos`
       )
     ).json();
   };
