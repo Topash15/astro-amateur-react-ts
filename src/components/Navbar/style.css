@@ -26,10 +26,19 @@ ul.socials{
   list-style: none;
   display: flex;
   gap: 1em;
+  align-items: center;
+}
+@media only screen and (max-width: 769px){
+  ul.socials{
+    margin-right: 3rem;
+  }
 }
 .socials li{
   width: 25px;
   transition: all 0.25s ease-in-out;
+}
+.socials a{
+  display: flex;
 }
 .socials li:hover{
   transform: scale(1.2);

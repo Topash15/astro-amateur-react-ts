@@ -5,7 +5,7 @@ import { getPlaceholder, blurryStyle } from "../../utils/blurredImagesHandler";
 import "./style.css";
 import "../../utils/blurredImagesStyle.css";
 import Loading from '../Loading';
-import {SERVER} from '../../environment'
+import { SERVER } from '../../environment'
 
 function Images() {
   // blurry loading image handler
@@ -28,37 +28,36 @@ function Images() {
     "photos",
     fetchAllPhotos
   );
-  const testing:string = 'loading'
   return (
     <>
       <div className="photos-container">
         {status === "error" && <div>{error!.message}</div>}
-        {status === "loading" && <Loading status={status}/>}
+        {status === "loading" && <Loading status={status} />}
         {status === "success"
           ? data.results.map((photo: any) => (
-              <a
-                className="photo"
-                key={photo.id}
-                href={`/#/photos/${photo.id}`}
+            <a
+              className="photo"
+              key={photo.id}
+              href={`/#/photos/${photo.id}`}
+            >
+              <div
+                className={`blurred-img ${isLoaded ? "loaded" : ""}`}
+                style={blurryStyle(photo.thumbnail, "thumbnail")}
               >
-                <div
-                  className={`blurred-img ${isLoaded ? "loaded" : ""}`}
-                  style={blurryStyle(photo.thumbnail, "thumbnail")}
-                >
-                  <img
-                    key={photo.id}
-                    src={photo.thumbnail}
-                    alt={photo.title}
-                    loading="lazy"
-                    onLoad={handleImageLoad}
-                  />
-                </div>
-                <div className="info">
-                  <h3>{photo.title}</h3>
-                  <p>{photo.description}</p>
-                </div>
-              </a>
-            ))
+                <img
+                  key={photo.id}
+                  src={photo.thumbnail}
+                  alt={photo.title}
+                  loading="lazy"
+                  onLoad={handleImageLoad}
+                />
+              </div>
+              <div className="info">
+                <h3>{photo.title}</h3>
+                <p>{photo.description}</p>
+              </div>
+            </a>
+          ))
           : null}
       </div>
     </>

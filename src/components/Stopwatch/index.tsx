@@ -21,7 +21,7 @@ function Stopwatch(props: { formInfo: TimerSubmit }) {
 
         const timeHandler = setInterval(() => {
             setTime(time + 1);
-            console.log({ newTime: time });
+            // console.log({ newTime: time });
         }, 1000);
 
 
