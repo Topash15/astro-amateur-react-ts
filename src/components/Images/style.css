@@ -32,10 +32,12 @@
   background: rgba(255, 255, 255, 0);
   transition: all 0.5s ease;
 }
-.photo:hover > img {
+.photo:hover > img,
+.photo:focus > img {
   opacity: 0.5;
 }
-.photo:hover .info {
+.photo:hover .info,
+.photo:focus .info {
   box-sizing: border-box;
   display: flex;
   z-index: 1;

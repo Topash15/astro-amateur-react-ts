@@ -28,13 +28,29 @@ function Images() {
     "photos",
     fetchAllPhotos
   );
+  const photoList:Photo[] | [] = data?.results || [{
+    id: 0,
+    title: "No Photos Found",
+    description: "There may be a connection issue. Please refresh or try later",
+    detailedDescription:'',
+    camera: '',
+    lens: '',
+    iso: 0,
+    aperture: '',
+    thumbnail: '',
+    hdSource: '',
+    source: '',
+    link: '',
+    date: '',
+    theme: '',
+    exposureTime: 0,}];
   return (
     <>
       <div className="photos-container">
         {status === "error" && <div>{error!.message}</div>}
         {status === "loading" && <Loading status={status} />}
         {status === "success"
-          ? data.results.map((photo: any) => (
+          ? photoList.toReversed().map((photo: any) => (
             <a
               className="photo"
               key={photo.id}

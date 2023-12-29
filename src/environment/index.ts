@@ -1,1 +1,1 @@
-export const SERVER:string = "https://astro-amateur-server.azurewebsites.net"
+export const SERVER:string = "https://astro-amateur-server.azurewebsites.net";

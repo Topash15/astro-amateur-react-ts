@@ -40,7 +40,8 @@ ul.socials{
 .socials a{
   display: flex;
 }
-.socials li:hover{
+.socials li:hover,
+.socials li:focus{
   transform: scale(1.2);
 }
 nav ul.nav-mobile {
