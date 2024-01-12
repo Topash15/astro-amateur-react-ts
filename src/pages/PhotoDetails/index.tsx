@@ -55,6 +55,7 @@ function PhotoDetails() {
                   />
                 </div>
               </a>
+              <a href={photo?.hdSource} target="_blank">[View Full Resolution]</a>
               <p id="date">Date Taken: {photo?.date}</p>
             </div>
             <div className="info-container">
