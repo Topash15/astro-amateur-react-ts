@@ -1,0 +1,16 @@
+div#filters {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+#filters a {
+  border: 1px solid var(--primary);
+  padding: 0.5em 1em;
+  transition: all 0.25s ease;
+}
+#filters :is(a:hover, a:focus, a:active, .current) {
+  color: #fff;
+  border: 1px solid #fff;
+}
