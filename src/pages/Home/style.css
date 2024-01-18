@@ -5,7 +5,7 @@
   align-items: center;
   height: 50vw;
   background: url(../../assets/portfolio-contents/sd-images/full_moon_mars-cropped.jpg)
-    no-repeat center/contain;
+    no-repeat center/contain black;
   text-shadow: 0 0 11px black;
 }
 @media (max-width: 650px) {
@@ -23,16 +23,24 @@
   text-align: center;
 }
 #home-filters {
-  margin-inline: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
+  column-gap: 5%;
   font-size: 1.25rem;
+  padding: 1rem 0;
 }
-#home-filters > div {
+#home-filters > a {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+#home-filters > a:hover img { 
+  transition: all .25s ease;
+}
+#home-filters > a:hover img {
+  overflow: hidden;
+  opacity: .2;
 }

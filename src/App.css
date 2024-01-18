@@ -2,7 +2,7 @@
   --primary: rgb(219, 191, 81);
   --secondary: rgb(202, 202, 202);
   --text: #fff;
-  --background: black;
+  --background: rgb(20, 20, 20);
 }
 h2{
   color: rgb(188, 188, 188);
