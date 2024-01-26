@@ -59,7 +59,7 @@ function Images() {
             <a
               className="photo"
               key={photo.id}
-              href={`/#/photos/${photo.id}`}
+              href={`/#/photos/id/${photo.id}`}
             >
               <div
                 className={`blurred-img ${isLoaded ? "loaded" : ""}`}
