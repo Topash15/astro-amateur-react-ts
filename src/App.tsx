@@ -8,6 +8,7 @@ import Admin from "./pages/Admin";
 import Debug from "./pages/Debug";
 import Navbar from "./components/Navbar";
 import Timer from './pages/Timer';
+import Footer from './components/Footer';
 import "./App.css";
 import PhotoDetails from "./pages/PhotoDetails";
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/debug" element={<Debug />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
+        <Footer />
       </QueryClientProvider>
     </>
   );

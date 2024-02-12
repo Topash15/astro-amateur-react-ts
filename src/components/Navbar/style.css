@@ -1,9 +1,9 @@
 header {
   height: 2rem;
-  box-shadow: 0 0 white;
+  box-shadow: 0 0 #fff;
   display: flex;
   align-items: center;
-  padding: .25rem;
+  padding: .5rem 1rem;
   position: relative;
   z-index: 10;
 }
@@ -15,6 +15,13 @@ header .title a{
   color: #fff;
   font-size: 1.2rem;
 }
+header #header-logo {
+  height: 100%;
+  display: inline-block;
+}
+header #header-logo img {
+  height: 100%;
+}
 nav ul {
   display: flex;
   list-style: none;
@@ -22,7 +29,7 @@ nav ul {
 nav li{
     padding: .5rem 1rem;
 }
-ul.socials{
+header .socials{
   list-style: none;
   display: flex;
   gap: 1em;
@@ -33,15 +40,15 @@ ul.socials{
     margin-right: 3rem;
   }
 }
-.socials li{
+header .socials li{
   width: 25px;
   transition: all 0.25s ease-in-out;
 }
-.socials a{
+header .socials a{
   display: flex;
 }
-.socials li:hover,
-.socials li:focus{
+header .socials li:hover,
+header .socials li:focus{
   transform: scale(1.2);
 }
 nav ul.nav-mobile {
@@ -75,7 +82,7 @@ nav button{
   gap: .4rem;
   position: relative;
   /* top: 40px; */
-  background: #000;
+  background: #0000005c;
   border: 1px solid var(--secondary);
   justify-content: center;
   align-items: center;

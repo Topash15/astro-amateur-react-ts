@@ -2,7 +2,9 @@
   --primary: rgb(219, 191, 81);
   --secondary: rgb(202, 202, 202);
   --text: #fff;
-  --background: rgb(20, 20, 20);
+  --background: rgb(35 53 86);
+  --footer-height:300px;
+  --footer-height-mobile:530px;
 }
 h2{
   color: rgb(188, 188, 188);
@@ -13,8 +15,20 @@ body {
   box-sizing: border-box;
   background: var(--background);
   color: var(--text);
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
 }
-
+#root{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: var(--footer-height);
+}
+@media screen and (max-width: 700px) {
+  #root{
+    padding-bottom: var(--footer-height-mobile);
+  }
+}
 :is(h1, h2, h3, h4, h5, h5) {
   font-size: 1rem;
   margin-top: 1em;

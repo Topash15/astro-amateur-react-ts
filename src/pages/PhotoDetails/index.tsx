@@ -41,6 +41,11 @@ function PhotoDetails() {
         {status === "loading" && <Loading status={'loading'}></Loading>}
         {status === "success" ? (
           <>
+            <div className="bread-crumbs">
+              <a href="/">Home</a>&gt;
+              <a href="/#/Photos">Photos</a> &gt;
+              <a href={`/#/Photos/${id}`}>{photo?.title}</a>
+            </div>
             <div className="photo-container">
               <a href={photo?.hdSource} target="_blank">
                 <div
