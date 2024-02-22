@@ -65,7 +65,7 @@ function PhotoDetails() {
             </div>
             <div className="info-container">
               <div>
-                <h2 id="photo-title">{photo?.title}</h2>
+                <h1 id="photo-title">{photo?.title}</h1>
                 <p id="photo-description-short">{photo?.description}</p>
                 <p id="photo-description-long">{photo?.detailedDescription}</p>
               </div>

@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
       <div className="home-container">
-        <h2>Rockets. The Moon<br/>Stars and Beyond.</h2>
+        <h1>Rockets. The Moon.<br/>Stars and Beyond.</h1>
         <p>I photograph them all.
         </p>
         <a href="/#/photos">Check them out.</a>

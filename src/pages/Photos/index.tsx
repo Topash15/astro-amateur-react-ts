@@ -7,7 +7,7 @@ function Photos() {
 
   return (
     <>
-      <h2>Photos</h2>
+      <h1>Photos</h1>
       <div className="bread-crumbs">
               <a href="/">Home</a>&gt;
               <a href="/#/Photos">Photos</a>
