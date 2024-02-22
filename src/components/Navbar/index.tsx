@@ -33,6 +33,9 @@ function Navbar() {
 
     return (
         <header className="header">
+            <a id="header-logo" href="/">
+                <img src="/android-chrome-192x192.png" alt="Astro Amateur Logo"/>
+            </a>
             <h1 className='title'><a href="/">Astro Amateur</a></h1>
             <ul className='socials'>
                 <li><a href="https://www.instagram.com/TheAstroAmateur" target="_blank"><img src="./assets/Instagram_Glyph_White256.png" alt="Instagram" width="100%" /></a></li>

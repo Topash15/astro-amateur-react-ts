@@ -2,21 +2,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 50vw;
-  background: url(../../assets/portfolio-contents/sd-images/full_moon_mars-cropped.jpg)
-    no-repeat center/contain black;
+  background: url(../../assets/portfolio-contents/sd-images/full_moon_mars-cropped.jpg) no-repeat center/contain black;
+  background: url(../../assets/portfolio-contents/sd-images/falcon-heavy-arrow.webp) no-repeat center right/cover;
   text-shadow: 0 0 11px black;
+  padding-left: 2rem;
 }
 @media (max-width: 650px) {
   .home-container {
     margin-top: 5rem;
   }
 }
-.home-container h2 {
-  font-size: clamp(3rem, 5vw, 5rem);
+.home-container h1 {
+  font-size: clamp(2rem,4vw,4rem);
   margin-block: 0;
-  text-align: center;
+  text-align: left;
 }
 .home-container p {
   font-size: 1.2rem;

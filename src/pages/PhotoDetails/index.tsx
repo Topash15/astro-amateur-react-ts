@@ -41,6 +41,11 @@ function PhotoDetails() {
         {status === "loading" && <Loading status={'loading'}></Loading>}
         {status === "success" ? (
           <>
+            <div className="bread-crumbs">
+              <a href="/">Home</a>&gt;
+              <a href="/#/Photos">Photos</a> &gt;
+              <a href={`/#/Photos/${id}`}>{photo?.title}</a>
+            </div>
             <div className="photo-container">
               <a href={photo?.hdSource} target="_blank">
                 <div
@@ -60,7 +65,7 @@ function PhotoDetails() {
             </div>
             <div className="info-container">
               <div>
-                <h2 id="photo-title">{photo?.title}</h2>
+                <h1 id="photo-title">{photo?.title}</h1>
                 <p id="photo-description-short">{photo?.description}</p>
                 <p id="photo-description-long">{photo?.detailedDescription}</p>
               </div>

@@ -47,3 +47,9 @@ table.meta-table {
 .meta-table th{
     text-align: right;
 }
+
+.bread-crumbs{
+    margin-left: .5em;
+    font-size: .9rem;
+    margin-bottom: 1em;
+}

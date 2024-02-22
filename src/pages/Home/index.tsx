@@ -3,25 +3,11 @@ import { SERVER } from '../../environment'
 
 function Home() {
 
-  // current server goes idle if not used
-  // this api call wakes up the server and will improve the load times
-  // for following server calls
-  const wakeServer = async () => {
-    return await (
-      await fetch(
-        `${SERVER}/api/portfolio/get/photo/1`, {
-        method: 'GET',
-        mode: 'no-cors'
-      }
-      )
-    ).json();
-  };
-
   return (
     <>
       <div className="home-container">
-        <h2>Astro Amateur</h2>
-        <p>I photograph rockets and space.
+        <h1>Rockets. The Moon.<br/>Stars and Beyond.</h1>
+        <p>I photograph them all.
         </p>
         <a href="/#/photos">Check them out.</a>
       </div>
