@@ -43,7 +43,7 @@ function SiteMap() {
     </url>
     `}).join('')
     const siteMap: string = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.astroamateur.space/</loc>
     </url>
