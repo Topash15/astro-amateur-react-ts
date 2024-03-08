@@ -1,7 +1,7 @@
 User-agent: Googlebot
-Disallow: /#/debug
+Disallow: /debug
 
 User-agent: *
-Allow: /#/
+Allow: /
 
 Sitemap: https://www.astroamateur.space/sitemap.xml
