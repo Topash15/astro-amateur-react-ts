@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react';
 import './style.css'
 import classnames from 'classnames';
 
+// Image imports
+import Instagram from '../../assets/Instagram_Glyph_White256.png';
+import Threads from '../../assets/threads-logo-white-01.png'
+
 function Footer() {
 
     return (
@@ -12,14 +16,14 @@ function Footer() {
                 </a>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/#/Photos">Photos</a></li>
+                    <li><a href="/Photos">Photos</a></li>
                 </ul>
                 <div id="contact">
                     <h3>Contact</h3>
                     <a href="mailto:atopash@astroamateur.space">atopash@astroamateur.space</a>
                     <ul className='socials'>
-                        <li><a href="https://www.instagram.com/TheAstroAmateur" target="_blank"><img src="/assets/Instagram_Glyph_White256.png" alt="Instagram" width="50" /></a></li>
-                        <li><a href="https://www.threads.net/TheAstroAmateur" target="_blank"><img src="/assets/threads-logo-white-01.png" alt="Threads" width="50" /></a></li>
+                        <li><a href="https://www.instagram.com/TheAstroAmateur" target="_blank"><img src={Instagram} alt="Instagram" width="50" /></a></li>
+                        <li><a href="https://www.threads.net/TheAstroAmateur" target="_blank"><img src={Threads} alt="Threads" width="50" /></a></li>
                     </ul>
                 </div>
             </div>

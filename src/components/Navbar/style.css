@@ -59,7 +59,7 @@ nav ul.nav-mobile {
   width: 100%;
   bottom: 30px;
   right: 0;
-  background: var(--background);
+  background: var(--mobile-nav-background);
   padding: .1rem;
   gap: 1rem;
   transition: transform 1s ease;

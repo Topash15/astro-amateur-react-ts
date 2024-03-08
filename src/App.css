@@ -3,6 +3,7 @@
   --secondary: rgb(202, 202, 202);
   --text: #fff;
   --background: rgb(35 53 86);
+  --mobile-nav-background: rgb(64, 73, 89);
   --footer-height:300px;
   --footer-height-mobile:530px;
 }

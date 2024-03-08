@@ -39,7 +39,7 @@ function SiteMap() {
 
     const dynamicSiteMap: string = photoList.map((photo)=>{return `
     <url>
-        <loc>https://www.astroamateur.space/#/photos/id/${photo.id}</loc>
+        <loc>https://www.astroamateur.space/photos/id/${photo.id}</loc>
     </url>
     `}).join('')
     const siteMap: string = `<?xml version="1.0" encoding="UTF-8"?>
@@ -48,7 +48,7 @@ function SiteMap() {
         <loc>https://www.astroamateur.space/</loc>
     </url>
     <url>
-        <loc>https://www.astroamateur.space/#/photos</loc>
+        <loc>https://www.astroamateur.space/photos</loc>
     </url>
         ${dynamicSiteMap}
     </urlset>`
