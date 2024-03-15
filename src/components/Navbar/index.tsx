@@ -53,7 +53,7 @@ function Navbar() {
                     <li><a onClick={()=>{toggleMenu()}} href="/blog" >Blog</a></li> */}
                 </ul>
                 {isMobile() ?
-                    <button onClick={() => { toggleMenu() }}>
+                    <button id="mobile-nav-menu-btn" arial-label="Open Navigation Menu" onClick={() => { toggleMenu() }}>
                         <span></span>
                         <span></span>
                         <span></span>

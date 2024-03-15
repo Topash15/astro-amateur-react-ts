@@ -19,7 +19,7 @@ function Footer() {
                     <li><a href="/Photos">Photos</a></li>
                 </ul>
                 <div id="contact">
-                    <h3>Contact</h3>
+                    <h1>Contact</h1>
                     <a href="mailto:atopash@astroamateur.space">atopash@astroamateur.space</a>
                     <ul className='socials'>
                         <li><a href="https://www.instagram.com/TheAstroAmateur" target="_blank"><img src={Instagram} alt="Instagram" width="50" /></a></li>
