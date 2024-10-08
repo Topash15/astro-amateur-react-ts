@@ -1,0 +1,28 @@
+.tool-box ul{
+    list-style: none;
+}
+
+.hidden .tool-body{
+    display: none;
+}
+.visible .tool-body{
+    display: block;
+}
+.toggle-btn{
+    background: none;
+    color: var(--primary);
+    padding: 1em;
+    border: none;
+    font-size: 1.5rem;
+}
+.toggle-btn:before{
+    color: var(--primary);
+    font-size: 1.5rem;
+    padding-right: 1em;
+}
+.hidden .toggle-btn:before{
+    content: "\25B7";
+}
+.visible .toggle-btn:before{
+    content: "\25BD";
+}

@@ -49,6 +49,7 @@ function Navbar() {
                 <ul className={classnames(isMobile() ? 'nav-mobile' : '', isOpen ? 'open' : 'closed')}>
                     <li><a onClick={() => { toggleMenu() }} href="/">Home</a></li>
                     <li><a onClick={() => { toggleMenu() }} href="/photos">Photos</a></li>
+                    <li><a onClick={() => { toggleMenu()}} href="/tools">Tools</a></li>
                     {/* <li><a onClick={()=>{toggleMenu()}} href="/about" >About</a></li>
                     <li><a onClick={()=>{toggleMenu()}} href="/blog" >Blog</a></li> */}
                 </ul>
