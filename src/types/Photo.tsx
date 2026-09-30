@@ -7,9 +7,7 @@ type Photo = {
   lens: string;
   iso: number;
   aperture: string;
-  thumbnail: string;
-  hdSource: string;
-  source: string;
+  fileName: string;
   link: string;
   date: string;
   theme: string;

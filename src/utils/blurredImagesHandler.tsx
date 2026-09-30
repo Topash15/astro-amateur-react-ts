@@ -14,9 +14,9 @@ export const getPlaceholder = (fileName: string, source: string): string => {
     }
     return fileName.replace(fileSource, 'placeholder/').replace(/\.[^/.]+$/, '-small.jpg').replace(/.thumbnail/, '');
 }
-export const blurryStyle = (fileName: string, source: string) => (
+export const blurryStyle = (fileName: string) => (
     {
-        background: `url(${getPlaceholder(fileName, source)})`,
+        background: `url(${fileName}-small.jpg)`,
         backgroundRepeat: `no-repeat`,
         backgroundSize: `cover`,
         width: `100%`,

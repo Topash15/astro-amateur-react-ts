@@ -5,7 +5,8 @@ import classnames from 'classnames';
 // Image imports
 import Instagram from '../../assets/Instagram_Glyph_White256.png';
 import Bluesky from '../../assets/Bluesky_icon.png';
-import Threads from '../../assets/threads-logo-white-01.png'
+import Threads from '../../assets/threads-logo-white-01.png';
+import Flickr from '../../assets/flickr.png';
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +44,7 @@ function Navbar() {
             </a>
             <h1 className='title'><a href="/">Astro Amateur</a></h1>
             <ul className='socials'>
+                <li><a href="" target=''><img src={Flickr} alt="Flickr" width="100%"/></a></li>
                 <li><a href="https://www.instagram.com/TheAstroAmateur" target="_blank"><img src={Instagram} alt="Instagram" width="100%" /></a></li>
                 <li><a href="https://bsky.app/profile/astroamateur.bsky.social" target="_blank"><img src={Bluesky} alt="BlueSky" width="100%" /></a></li>
                 {/* <li><a href="https://www.threads.net/TheAstroAmateur" target="_blank"><img src={Threads} alt="Threads" width="100%" /></a></li> */}

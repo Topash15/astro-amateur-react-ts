@@ -40,9 +40,7 @@ function Images() {
     lens: '',
     iso: 0,
     aperture: '',
-    thumbnail: '',
-    hdSource: '',
-    source: '',
+    fileName: '',
     link: '',
     date: '',
     theme: '',
@@ -63,11 +61,11 @@ function Images() {
             >
               <div
                 className={`blurred-img ${isLoaded ? "loaded" : ""}`}
-                style={blurryStyle(photo.thumbnail, "thumbnail")}
+                style={blurryStyle(photo.fileName)}
               >
                 <img
                   key={photo.id}
-                  src={photo.thumbnail}
+                  src={`${photo.fileName}.png`}
                   alt={photo.title}
                   loading="lazy"
                   onLoad={handleImageLoad}
@@ -90,11 +88,11 @@ function Images() {
             >
               <div
                 className={`blurred-img ${isLoaded ? "loaded" : ""}`}
-                style={blurryStyle(photo.thumbnail, "thumbnail")}
+                style={blurryStyle(photo.fileName)}
               >
                 <img
                   key={photo.id}
-                  src={photo.thumbnail}
+                  src={`${photo.fileName}.thumbnail.jpg`}
                   alt={photo.title}
                   loading="lazy"
                   onLoad={handleImageLoad}

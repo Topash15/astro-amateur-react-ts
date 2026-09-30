@@ -47,20 +47,20 @@ function PhotoDetails() {
               <a href={`/Photos/${id}`}>{photo?.title}</a>
             </div>
             <div className="photo-container">
-              <a href={photo?.hdSource} target="_blank">
+              <a href={`${photo?.fileName}.png`} target="_blank">
                 <div
                   className={`blurry-img ${isLoaded ? "loaded" : ""}`}
                   // style={blurryStyle(photo?.source, "sd")}
                 >
                   <img
-                    src={photo?.source}
+                    src={`${photo?.fileName}.jpg`}
                     alt={photo?.title}
                     onLoad={handleImageLoad}
                     width="100%"
                   />
                 </div>
               </a>
-              <a href={photo?.hdSource} target="_blank">[View Full Resolution]</a>
+              <a href={`${photo?.fileName}.png`} target="_blank">[View Full Resolution]</a>
               <p id="date">Date Taken: {photo?.date}</p>
             </div>
             <div className="info-container">
