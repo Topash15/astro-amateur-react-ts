@@ -41,11 +41,14 @@ header .socials{
   }
 }
 header .socials li{
-  width: 25px;
+  height: 25px;
   transition: all 0.25s ease-in-out;
 }
 header .socials a{
-  display: flex;
+  display: inline;
+}
+header .socials a img {
+	height: 25px;
 }
 header .socials li:hover,
 header .socials li:focus{
