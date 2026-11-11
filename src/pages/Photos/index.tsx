@@ -14,10 +14,11 @@ function Photos() {
             </div>
       <div id="filters">
         {category ? <a id="clear-filter" href="/photos">Clear Filter</a> : null}
-        <a className={category === "Moon" ? 'current': ''} href="/photos/Moon">Moon</a>
-        <a className={category === "Rocket" ? 'current': ''} href="/photos/Rocket">Rockets</a>
+        <a className={category === "Aviation" ? 'current': ''} href="/photos/Aviation">Aviation</a>
         <a className={category === "Deep Space" ? 'current': ''} href="/photos/Deep Space">Deep Space</a>
+        <a className={category === "Moon" ? 'current': ''} href="/photos/Moon">Moon</a>
         <a className={category === "Planet" ? 'current': ''} href="/photos/Planet">Planets</a>
+        <a className={category === "Rocket" ? 'current': ''} href="/photos/Rocket">Rockets</a>
       </div>
       <Images />
     </>
